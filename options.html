@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sbang</title>
+  <style>
+    html {background-color: black;} 
+    
+    button {
+      font-size: 16px;
+      padding: 0.25em 1.2em;
+      border: transparent;
+      box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+      background: #7070ff;
+      color: white;
+      border-radius: 3.5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: linear-gradient(90deg, rgba(30, 144, 255,1) 0%, rgba(0,212,255,1) 100%);
+    }
+
+    button:active {transform: translate(0, 0.12em); }
+
+    td, th {
+      text-align: center;
+      font-family: Courier New, monospace;
+      font-size: 13px;
+      padding: 1px 1px;
+      border: 1px solid gray;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    th { background-color: #5e5c64; color: #fff; }
+    td { background-color: #000; color: #fff; }
+
+    table {
+      margin: 20px auto;
+      border-collapse: collapse;
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    th:nth-child(1) { width: 20%; }
+    th:nth-child(2) { width: 15%; }
+    th:nth-child(3) { width: 55%; }
+    th:nth-child(4) { width: 10%; }
+
+    .container {width: 50%; margin: 40px auto;}
+
+    th input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 6px;
+      font-size: 14px;
+      font-family: Courier New, monospace;
+      background-color: #1a1a1a;
+      color: #fff;
+      border: 1px solid gray;
+    }
+
+    .del {
+      cursor: pointer;
+      opacity: 0.6;
+    }
+
+    .del:hover {opacity: 1;}
+
+  </style>
+  </head>
+  <body>
+    <div class="container">
+      <table>
+        <thead>
+          <tr>
+            <th><input id="name" type="text" placeholder="Service"></th>
+            <th><input id="shortcut" type="text" placeholder="!shortcut"></th>
+            <th><input id="url" type="text" placeholder="URL"></th>
+            <th><button id="add">Add</th>
+          </tr> 
+        </thead>
+        <tbody id="list"></tbody>
+      </table>
+    </div>  
+    <script src="options.js"></script>
+  </body>
+</html>
